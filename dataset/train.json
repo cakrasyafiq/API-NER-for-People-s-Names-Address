@@ -1,0 +1,129 @@
+[
+  {
+    "text": "Nama saya Budi Santoso dan tinggal di Jalan Sudirman Jakarta",
+    "entities": [[10, 22, "PERSON"], [36, 59, "ADDRESS"]]
+  },
+  {
+    "text": "Saya Andi Wijaya, alamat di Jalan Merdeka Bandung",
+    "entities": [[5, 16, "PERSON"], [28, 51, "ADDRESS"]]
+  },
+  {
+    "text": "Perkenalkan nama saya Siti Aminah, rumah saya di Jalan Diponegoro Surabaya",
+    "entities": [[21, 32, "PERSON"], [49, 75, "ADDRESS"]]
+  },
+  {
+    "text": "Saya Rudi Hartono tinggal di Jalan Ahmad Yani Semarang",
+    "entities": [[5, 17, "PERSON"], [29, 56, "ADDRESS"]]
+  },
+  {
+    "text": "Nama lengkap Dewa Putra, alamat di Jalan Gatot Subroto Denpasar",
+    "entities": [[13, 23, "PERSON"], [35, 66, "ADDRESS"]]
+  },
+  {
+    "text": "Perkenalkan Andi Pratama, saya tinggal di Jalan Asia Afrika Bandung",
+    "entities": [[12, 24, "PERSON"], [41, 72, "ADDRESS"]]
+  },
+  {
+    "text": "Nama saya Rina Marlina dan alamat saya di Jalan Pemuda Semarang",
+    "entities": [[10, 22, "PERSON"], [41, 68, "ADDRESS"]]
+  },
+  {
+    "text": "Saya Dedi Kurniawan tinggal di Jalan Pahlawan Surabaya",
+    "entities": [[5, 20, "PERSON"], [32, 59, "ADDRESS"]]
+  },
+  {
+    "text": "Perkenalkan Putri Ayu, rumah di Jalan Imam Bonjol Jakarta",
+    "entities": [[12, 22, "PERSON"], [33, 61, "ADDRESS"]]
+  },
+  {
+    "text": "Nama saya Agus Salim dan tinggal di Jalan Raya Bogor",
+    "entities": [[10, 20, "PERSON"], [34, 55, "ADDRESS"]]
+  },
+
+  {
+    "text": "Nama saya Riko Pratama tinggal di Jalan Kenanga Jakarta",
+    "entities": [[10, 22, "PERSON"], [34, 55, "ADDRESS"]]
+  },
+  {
+    "text": "Saya Wulan Sari alamat di Jalan Melati Bandung",
+    "entities": [[5, 15, "PERSON"], [26, 46, "ADDRESS"]]
+  },
+  {
+    "text": "Perkenalkan Dimas Putra, rumah di Jalan Cendana Surabaya",
+    "entities": [[12, 23, "PERSON"], [34, 56, "ADDRESS"]]
+  },
+  {
+    "text": "Nama saya Taufik Hidayat dan tinggal di Jalan Kartini Semarang",
+    "entities": [[10, 24, "PERSON"], [40, 62, "ADDRESS"]]
+  },
+  {
+    "text": "Saya Ayu Lestari alamat di Jalan Gajah Mada Yogyakarta",
+    "entities": [[5, 16, "PERSON"], [27, 54, "ADDRESS"]]
+  },
+  {
+    "text": "Perkenalkan Fajar Nugroho, rumah di Jalan Thamrin Jakarta",
+    "entities": [[12, 25, "PERSON"], [36, 57, "ADDRESS"]]
+  },
+  {
+    "text": "Nama saya Indra Wijaya tinggal di Jalan Sisingamangaraja Medan",
+    "entities": [[10, 22, "PERSON"], [34, 62, "ADDRESS"]]
+  },
+  {
+    "text": "Saya Nanda Putri alamat di Jalan Teuku Umar Denpasar",
+    "entities": [[5, 16, "PERSON"], [27, 52, "ADDRESS"]]
+  },
+  {
+    "text": "Perkenalkan Rizky Ananda, rumah di Jalan Sudirman Makassar",
+    "entities": [[12, 24, "PERSON"], [35, 58, "ADDRESS"]]
+  },
+  {
+    "text": "Nama saya Bayu Prakoso tinggal di Jalan Diponegoro Malang",
+    "entities": [[10, 22, "PERSON"], [34, 57, "ADDRESS"]]
+  },
+
+  {
+    "text": "Saya ingin bertanya tentang layanan internet",
+    "entities": []
+  },
+  {
+    "text": "Bagaimana cara menghubungi customer service",
+    "entities": []
+  },
+  {
+    "text": "Tolong bantu saya dengan tagihan bulanan",
+    "entities": []
+  },
+  {
+    "text": "Nama saya Muhammad Rizky Pratama tinggal di Jalan Ahmad Dahlan Jakarta",
+    "entities": [[10, 33, "PERSON"], [44, 70, "ADDRESS"]]
+  },
+  {
+    "text": "Nama saya Abdul Rahman Fadillah tinggal di Jalan Veteran Surabaya",
+    "entities": [[10, 31, "PERSON"], [43, 65, "ADDRESS"]]
+  },
+  {
+    "text": "Perkenalkan Bintang Cahaya Putri tinggal di Jalan Pahlawan Malang",
+    "entities": [[12, 32, "PERSON"], [44, 65, "ADDRESS"]]
+  },
+  {
+    "text": "Nama saya Agung Setiawan Prakoso tinggal di Jalan Kenari Yogyakarta",
+    "entities": [[10, 33, "PERSON"], [45, 68, "ADDRESS"]]
+  },
+
+  {
+    "text": "Nama saya Bima tinggal di Jalan Merpati Jakarta",
+    "entities": [[10, 14, "PERSON"], [26, 48, "ADDRESS"]]
+  },
+  {
+    "text": "Perkenalkan Raka tinggal di Jalan Anggrek Bandung",
+    "entities": [[12, 16, "PERSON"], [28, 50, "ADDRESS"]]
+  },
+  {
+    "text": "Nama saya Dika alamat di Jalan Flamboyan Semarang",
+    "entities": [[10, 14, "PERSON"], [25, 51, "ADDRESS"]]
+  },
+  {
+    "text": "Saya Tio tinggal di Jalan Teratai Depok",
+    "entities": [[5, 8, "PERSON"], [20, 39, "ADDRESS"]]
+  }
+]
