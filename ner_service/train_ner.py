@@ -5,9 +5,7 @@ import json
 import os
 from pathlib import Path
 
-# =========================
 # LOAD DATASET (SAFE PATH)
-# =========================
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATASET_PATH = os.path.join(BASE_DIR, "..", "dataset", "train.json")
 
@@ -17,22 +15,19 @@ with open(DATASET_PATH, "r", encoding="utf-8") as f:
 TRAIN_DATA = []
 for item in raw_data:
     TRAIN_DATA.append((item["text"], {"entities": item["entities"]}))
+    
 
-# =========================
 # LOAD BASE MODEL
-# =========================
 nlp = spacy.load("en_core_web_sm")
 
-# =========================
+
 # ADD NER LABELS
-# =========================
 ner = nlp.get_pipe("ner")
 ner.add_label("PERSON")
 ner.add_label("ADDRESS")
 
-# =========================
+
 # TRAINING
-# =========================
 optimizer = nlp.resume_training()
 EPOCHS = 25
 
@@ -52,9 +47,8 @@ with nlp.disable_pipes(*other_pipes):
 
         print(f"Epoch {epoch+1}/{EPOCHS} - Loss: {losses}")
 
-# =========================
+
 # SAVE MODEL
-# =========================
 output_dir = Path("model")
 output_dir.mkdir(exist_ok=True)
 nlp.to_disk(output_dir)

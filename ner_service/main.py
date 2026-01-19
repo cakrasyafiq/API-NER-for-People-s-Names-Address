@@ -3,24 +3,24 @@ from pydantic import BaseModel
 import spacy
 import os
 
-# ========== Load Model ==========
+# Load Model 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(BASE_DIR, "model")
 
 nlp = spacy.load(MODEL_PATH)
 
-# ========== FastAPI App ==========
+# FastAPI App 
 app = FastAPI(
     title="NER Service",
     description="Custom NER service that extracts PII entities",
     version="1.0"
 )
 
-# ========== Request Schema ==========
+# Request Schema
 class NERRequest(BaseModel):
     text: str
 
-# ========== Response Schema ==========
+# Response Schema
 class Entity(BaseModel):
     start: int
     end: int
@@ -29,7 +29,7 @@ class Entity(BaseModel):
 class NERResponse(BaseModel):
     entities: list[Entity]
 
-# ========== Endpoint ==========
+# Endpoint
 @app.post("/ner", response_model=NERResponse)
 def extract_entities(request: NERRequest):
     doc = nlp(request.text)
