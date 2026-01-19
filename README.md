@@ -16,18 +16,32 @@ This service is designed as an independent backend for AI systems that require P
 
 ---
 
-## 🏗️ Project Structure
+## 🏗️ Project Architecture
 
 ```
-API-NER-for-People-s-Names-Address/
-├── ner_service/
-│   ├── model/              # Trained spaCy NER model
-│   ├── dataset/            # Training dataset (JSON)
-│   ├── train_ner.py        # Training script
-│   └── main.py             # FastAPI application
-├── requirements.txt
-├── .gitignore
-└── README.md
+Client / Service Lain
+        |
+        |  HTTP POST /ner
+        |  { "text": "<input text>" }
+        v
++----------------------------+
+|        FastAPI App         |
+|        (NER Service)       |
++----------------------------+
+        |
+        |  spaCy pipeline
+        v
++----------------------------+
+|   Custom spaCy NER Model   |
+|  (PERSON, ADDRESS)         |
++----------------------------+
+        |
+        |  Extract entity metadata
+        v
++----------------------------+
+|  Structured JSON Response |
+|  start, end, label        |
++----------------------------+
 ```
 
 ---
@@ -144,11 +158,57 @@ ner_service/dataset/train.json
 
 ---
 
-## 🔐 Example Use Cases
+## 🔐 Try It Out
 
-- AI Customer Service Guardrail
-- PII Detection & Compliance
-- Input Sanitization for LLM-based Systems
+```bash
+Nama saya Budi Santoso dan saya tinggal di Jalan Sudirman Jakarta.
+```
+→ PERSON, ADDRESS
+
+```bash
+Perkenalkan Andi Wijaya, alamat rumah di Jalan Merdeka Bandung.
+```
+→ PERSON, ADDRESS
+
+```bash
+Saya Rina Marlina sekarang menetap di Jalan Diponegoro Surabaya.
+```
+→ PERSON, ADDRESS
+
+```bash
+Nama lengkap Dimas Pratama Putra dan tinggal di Jalan Ahmad Yani Semarang.
+```
+→ PERSON (3 kata), ADDRESS
+
+```bash
+Perkenalkan Taufik Hidayat, saya tinggal di Jalan Gatot Subroto Denpasar.
+```
+→ PERSON, ADDRESS
+
+```bash
+Saya Ayu dan alamat rumah saya di Jalan Asia Afrika Bandung.
+```
+→ PERSON (1 kata), ADDRESS
+
+```bash
+Nama saya Muhammad Rizky Ramadhan Putra dan tinggal di Jalan Pemuda Jakarta.
+```
+→ PERSON (4 kata), ADDRESS
+
+```bash
+Perkenalkan Bayu Prakoso yang saat ini berada di Jalan Pahlawan Malang.
+```
+→ PERSON, ADDRESS
+
+```bash
+Halo, saya ingin menanyakan status pengiriman pesanan saya.
+```
+→ ❌ No entity expected
+
+```bash
+Apakah customer service tersedia 24 jam setiap hari?
+```
+→ ❌ No entity expected
 
 ---
 
