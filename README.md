@@ -144,16 +144,22 @@ Text masking and redaction are handled by downstream services such as a guardrai
 
 ---
 
-## 🧠 Model Training (Optional)
+## 🧠 Model Training Pipeline
 
-To retrain the NER model:
-```bash
-python ner_service/train_ner.py
 ```
-
-Training dataset location:
-```
-ner_service/dataset/train.json
+JSON Dataset
+   ↓
+Format Conversion (spaCy)
+   ↓
+Load Pretrained Model
+   ↓
+Add Custom Entity Labels
+   ↓
+Disable Other Pipelines
+   ↓
+NER Training Loop
+   ↓
+Model Saved to Disk
 ```
 
 ---
